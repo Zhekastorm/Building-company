@@ -1,0 +1,974 @@
+body{
+    margin: 0;
+    background: white;
+    padding: 0;
+    
+    font-family:'Montserrat', sans-serif;
+    font-size: 18px;
+    color: black
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+p{
+    margin: 0 0 10px;
+}
+
+/* Button */
+.btn_1{
+    display: inline-block;
+    background-color: rgb(247, 151, 0);
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 15px 30px;
+    border-radius: 15px;
+
+    transition: all .3s linear;
+}
+
+.btn_1:hover{
+    background-color: white;
+}
+
+.btn_1:active{
+    filter: invert(15%);
+}
+
+/* Darkening for blocks */
+.shading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+/* Popup */
+.popup__card{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    max-width: 400px;
+    background-color: #f1f1f1;
+    padding: 60px;
+}
+
+.popup__card-suptitle{
+    font-size: 26px;
+    font-weight: bold;
+    color: #FF8C00;
+    text-transform: uppercase;
+}
+
+.popup__card-title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.popup__card-text{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #9ea0ac;
+}
+
+/*_____Container_____*/
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* _____Header_____ */
+.header{
+    width: 100%;
+    background-color: #303030;
+    position: relative;
+}
+
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+#check__menu{
+    display: none;
+}
+
+label{
+    /*display: none;*/
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    z-index: 1;
+    line-height: 30px;
+    width: 35px;
+    height: 35px;
+}
+
+.burger__line{
+    display: none;
+    position: absolute;
+    right: 15px;
+    z-index: 1;
+
+    width: 35px;
+    height: 3px;
+    background-color: white;
+}
+
+.burger__line.first{
+    top: 32px;
+}
+
+.burger__line.second{
+    bottom: 32px;
+}
+
+.header__logo{
+    margin-right: 25px;
+}
+
+.header__logo img{
+    display: block;
+    width: 200px;
+    height: 100%;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav__link{
+    position: relative;
+    margin-left: 15px;
+}
+
+.nav__link:first-child{
+    margin-left: 0;
+}
+
+.nav__link::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(247, 151, 0);
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    z-index: 1;
+    margin-top: 10px;
+    transform: scale3d(0, 1, 1);
+    transform-origin: 0 50%;
+    transition: all .2s ease-in;
+}
+
+.nav__link:hover::after{
+    transform: scale3d(1, 1, 1);
+}
+
+.nav__link a{
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 70px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-top: 10px;
+}
+
+/* Intro */
+
+.section__intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url("image/background_1.jpg")  no-repeat center;
+    background-size: cover;
+    background-color: #303030;
+    background-attachment: fixed;
+    padding: 190px 0;
+    position: relative;
+}
+
+.intro__inner{
+    float: left;
+    width: 100%;
+    max-width: 70%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1000;
+}
+
+.intro__title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 56px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 24px;
+}
+
+.intro__suptitle{
+    font-size: 40px;
+    color: #FF8C00;
+}
+
+.intro__text{
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    color: white;
+    line-height: 1.5;
+}
+
+.intro--btn{
+    padding: 15px 88px;
+}
+
+/* ELVO */
+.elvo{
+    padding: 100px 0;
+    background-color: #ffe1a8;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+}
+
+.elvo__inner{
+    width: 100%;
+    text-align: center;
+}
+
+.elvo__suptitle{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #696969;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.elvo__title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 46px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.elvo__text{
+    font-size: 24px;
+    line-height: 1.35;
+    margin-top: 25px;
+}
+
+/* Tasks */
+
+.tasks{
+    padding-top: 120px;
+    padding-bottom: 40px;
+}
+
+.tasks__inner{
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.tasks__img img{
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.popup--tasks{
+    bottom: -60px;
+    right: 80px;
+}
+
+/* Works */
+.works{
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.works__inner{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.works__item{
+    width: 33.33333%;
+    position: relative;
+}
+
+.works__img{
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.works__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: 30px;
+}
+
+.works__title{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.works__text{
+    font-size: 16px;
+    line-height: 1.4;
+    color: white;
+}
+
+/* Services */
+
+.services{
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: #ffe1a8;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 98% 100%, 96% 98%, 94% 100%, 92% 98%, 90% 100%, 88% 98%, 86% 100%, 84% 98%, 82% 100%, 80% 98%, 78% 100%, 76% 98%, 74% 100%, 72% 98%, 70% 100%, 68% 98%, 66% 100%, 64% 98%, 62% 100%, 60% 98%, 58% 100%, 56% 98%, 54% 100%, 52% 98%, 50% 100%, 48% 98%, 46% 100%, 44% 98%, 42% 100%, 40% 98%, 38% 100%, 36% 98%, 34% 100%, 32% 98%, 30% 100%, 28% 98%, 26% 100%, 24% 98%, 22% 100%, 20% 98%, 18% 100%, 16% 98%, 14% 100%, 12% 98%, 10% 100%, 8% 98%, 6% 100%, 4% 98%, 2% 100%, 0% 98%);
+}
+
+.section__header{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.section__header--suptitle{
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: #FF8C00;
+}
+
+.section__header--title{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.services__inner{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.services__item{
+    width: 32%;
+    background-color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.services__icon i{
+    font-size: 50px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.services__title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.services__text{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* Portfolio */
+
+.section__portfolio{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 150px;
+}
+
+.portfolio{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio__inner{
+    width: 25%;
+}
+
+.portfolio__item{
+    width: 100%;
+    position: relative;
+}
+
+.portfolio__img img{
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+    opacity: 1;
+    transition: all .3s linear;
+}
+
+.portfolio__content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .6);
+    padding: 15px;
+
+    opacity: 0;
+    transition: all .3s linear;
+}
+
+.portfolio__item:hover .portfolio__content{
+    opacity: 1;
+}
+
+.portfolio__title{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* About */
+
+.about{
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.about__inner{
+    width: 100%;
+    padding-left: 400px;
+    position: relative;
+}
+
+.about__img img{
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.popup__card--elvo{
+    max-width: 510px;
+    bottom: -1px;
+    left: 0;
+    z-index: 1;
+}
+
+.popup__card--elvo .popup__card-text::before{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+/* Planning */
+
+.planning{
+    padding: 120px 0;
+    background-color: #ffe1a8;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 96%, 0% 100%);
+}
+
+.planning__item{
+    width: 24%;
+    background-color: white;
+    border-radius: 25px;
+    padding: 40px 25px;
+    text-align: center;
+}
+
+/* Reviews */
+
+.reviews{
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.reviews__inner{
+    width: 100%;
+    display: flex;
+}
+
+.reviews__item{
+    width: calc(33.33333% - 30px);
+    background-color: #ffe1a8;
+    padding: 30px 30px 75px;
+    margin: 0 15px 30px;
+    border-radius: 15px;
+}
+
+.reviews__data{
+    font-size: 18px;
+    font-weight: 300;
+    color: #777777;
+    margin-bottom: 25px;
+}
+
+.reviews__prof{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 25px;
+}
+
+.reviews__text{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.55;
+}
+
+/* Contacts */
+
+.contacts{
+    padding: 140px 0;
+    background: url("image/Контакты.jpg") no-repeat center;
+    background-size: cover;
+    background-color: #ffe1a8;
+}
+
+.contacts__inner{
+    max-width: 880px;
+    background: white;
+    padding: 60px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contacts__title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.contacts__subtitle{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.contacts__text{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.35;
+}
+
+.social__contacts{
+    display: flex;
+    justify-content: center;
+}
+
+.social__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: black;
+    padding: 5px;
+    border-radius: 7px;
+
+    margin-right: 10px;
+    background-color: #ffe1a8;
+    transition: all .3s linear;
+}
+
+.social__link:last-child{
+    margin-right: 0;
+}
+
+.social__icon{
+    display: block;
+    height: 25px;
+    fill: #303030;
+
+    transition: fill .3s linear;
+}
+
+.social__link:hover{
+    background-color: black;
+}
+
+.social__link:hover .social__icon{
+    fill: white;
+}
+
+/* Footer */
+
+.footer{
+    padding: 40px 0 20px;
+    background-color: #303030;
+}
+
+.footer__inner{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    font-size: 16px;
+    color: white;
+    line-height: 1.5;
+}
+
+.footer__logo img{
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    overflow: hidden;
+}
+
+.footer__address{
+    text-align: right;
+}
+
+.footer__number{
+    color: white;
+    text-decoration: none;
+    margin-bottom: 12px;
+
+    transition: color .3s linear;
+}
+
+.footer__number:hover{
+    color: #ffe1a8;
+}
+
+
+/*______Media______*/
+
+/* Tablet */
+@media (max-width: 1130px) {
+
+    /* Container */
+    .container{
+        padding: 0 30px;
+    }
+    /* Button */
+    .btn_1{
+        font-size: 12px;
+    }
+    .popup__btn .btn_1 {
+        font-size: 12px;
+        padding: 15px 20px;
+        margin-top: 5px;
+    }
+    /* Header */
+    .nav__link a{
+        line-height: 18px;
+    }
+    .nav__link:after{
+        bottom: -5px;
+    }
+    /* Intro */
+    .section__intro{
+        padding: 100px 0;
+        background: url("image/background_1.jpg") no-repeat center;
+        background-size: cover;
+    }
+    .intro__inner{
+        max-width: 65%;
+    }
+    .intro__title{
+        font-size: 35px;
+    }
+    .intro__suptitle{
+        font-size: 25px;
+    }
+    .intro__text{
+        font-size: 22px;
+    }
+    .intro--btn{
+        padding: 15px 50px;
+    }
+    /* ELVO */
+    .elvo{
+        padding: 30px 0;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%);
+    }
+    .elvo__title{
+        font-size: 35px;
+    }
+    .elvo__suptitle{
+        margin-bottom: 10px;
+    }
+    .elvo__text{
+        font-size: 18px;
+    }
+    /* Tasks */
+    .tasks{
+        padding: 30px 0;
+    }
+    .tasks__inner{
+        margin-bottom: 60px;
+    }
+    .popup--tasks{
+        max-width: 300px;
+        right: 30px;
+        padding: 30px;
+    }
+    .popup__card-title{
+        font-size: 20px;
+    }
+    .popup__card-text{
+        font-size: 16px;
+    }
+    /* Works */
+    .works{
+        padding-top: 0;
+        padding-bottom: 30px;
+    }
+    .works__title{
+        font-size: 20px;
+    }
+    .works__text{
+        font-size: 10px;
+    }
+    /* Services */
+    .services{
+        padding: 30px 0;
+    }
+    .section__header--suptitle, .section__header--title{
+        font-size: 35px;
+    }
+    .services__title{
+        font-size: 20px;
+    }
+    .services__text{
+        font-size: 18px;
+    }
+    /* Portfolio */
+    .section__portfolio{
+        padding-top: 30px;
+    }
+    /* About */
+    .about{
+        padding: 30px 0;
+    }
+    .about__inner{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-left: 0;
+    }
+    .about__img{
+        width: 50%;
+        order: 2;
+    }
+    .about__img img{
+        height: 100%;
+    }
+    .popup__card--elvo{
+        width: 50%;
+        position: static;
+        padding: 10px 20px;
+    }
+    .popup__card-suptitle{
+        font-size: 18px;
+    }
+    /* Planning */
+    .planning__item{
+        width: 48%;
+        margin-bottom: 30px;
+    }
+    /* Reviews */
+    .reviews{
+        padding: 30px 0;
+    }
+    .reviews__inner{
+        display: block;
+    }
+    .reviews__item{
+        width: 75%;
+        margin: 0 auto;
+        padding: 30px;
+    }
+    /* Contacts */
+
+    /* Footer */
+
+}
+
+
+/* Mobile */
+@media (max-width: 800px) {
+    /* Container */
+    .container{
+        padding: 0;
+    }
+    /* Header */
+    .header__inner{
+        justify-content: center;
+    }
+    .burger__line{
+        display: block;
+    }
+    .header__logo img{
+        width: 155px;
+    }
+    .main__menu{
+        display: none;
+    }
+    /* Intro */
+    .section__intro{
+        padding: 40px 0;
+        background: url("image/background_1.jpg") no-repeat center;
+        background-size: cover;
+    }
+    .intro__inner{
+        max-width: 100%;
+        padding-left: 10px;
+    }
+    .intro__title{
+        font-size: 24px;
+    }
+    .intro__suptitle{
+        font-size: 18px;
+    }
+    .intro__text{
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+    .intro--btn{
+        font-size: 10px;
+    }
+    /* ELVO */
+    .elvo{
+        clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 100%, 0% 95%);
+    }
+    .elvo__suptitle{
+        font-size: 18px;
+    }
+    .elvo__title{
+        font-size: 20px;
+    }
+    .elvo__text{
+        font-size: 16px;
+    }
+
+    /* Tasks */
+    .tasks__inner{
+        margin-bottom: 0;
+    }
+    .popup--tasks{
+        position: static;
+        max-width: 100%;
+        padding: 30px 10px;
+    }
+    .popup__btn{
+        text-align: center;
+    }
+    /* Works */
+    .works__item{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Services */
+    .services .container{
+        padding: 0 10px;
+    }
+    .section__header--suptitle, .section__header--title{
+        font-size: 20px;
+    }
+    .services__item{
+        width: 100%;
+    }
+    .services__title{
+        font-size: 20px;
+    }
+    .services__text{
+        font-size: 16px;
+    }
+    /* Portfolio */
+    .portfolio__inner{
+        width: 50%;
+    }
+
+    /* About */
+    .about__inner{
+        display: block;
+    }
+    .about__img{
+        width: 100%;
+    }
+    .popup__card--elvo{
+        width: 100%;
+        max-width: 100%;
+        padding: 15px 10px;
+    }
+
+    /* Planning */
+    .planning__inner{
+        justify-content: center;
+    }
+    .planning__item{
+        width: 100%;
+        max-width: 270px;
+        margin: 0 auto 30px;
+    }
+    /* Reviews */
+
+    /* Contacts */
+
+    /* Footer */
+
+}
