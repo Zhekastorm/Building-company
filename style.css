@@ -538,6 +538,7 @@ ul{
 .reviews{
     padding-top: 80px;
     padding-bottom: 120px;
+    position: relative;
 }
 
 .reviews__inner{
@@ -545,8 +546,16 @@ ul{
     display: flex;
 }
 
+.reviews__desktop{
+    display: block;
+}
+
+.reviews__mobile{
+    display: none;
+}
+
 .reviews__item{
-    width: calc(33.33333% - 30px);
+    width: 27%;
     background-color: #ffe1a8;
     padding: 30px 30px 75px;
     margin: 0 15px 30px;
@@ -571,6 +580,49 @@ ul{
     font-size: 18px;
     font-weight: 300;
     line-height: 1.55;
+}
+
+.slick-arrow{
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+    border-color: transparent;
+    text-align: -webkit-center;
+    transition: all .3s linear;
+}
+
+.slick-arrow:active{
+    filter: invert(30%);
+}
+
+.slick-arrow::before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+}
+
+.slick-prev{
+    left: -55px;
+}
+
+.slick-prev::before{
+    transform: rotate(-45deg);
+}
+
+.slick-next{
+    right: -55px;
+}
+
+.slick-next::before{
+    transform: rotate(130deg);
 }
 
 /* Contacts */
@@ -637,7 +689,7 @@ ul{
 .social__icon{
     display: block;
     height: 25px;
-    fill: #303030;
+    fill: white;
 
     transition: fill .3s linear;
 }
@@ -646,14 +698,10 @@ ul{
     background-color: black;
 }
 
-.social__link:hover .social__icon{
-    fill: white;
-}
-
 /* Footer */
 
 .footer{
-    padding: 40px 0 20px;
+    padding-top: 40px;
     background-color: #303030;
 }
 
@@ -677,6 +725,7 @@ ul{
 }
 
 .footer__address{
+    max-width: 50%;
     text-align: right;
 }
 
@@ -690,6 +739,15 @@ ul{
 
 .footer__number:hover{
     color: #ffe1a8;
+}
+
+.footer__copyright{
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    margin-top: 15px;
+    padding: 10px;
+    border-top: 1px solid #f1f1f1;
 }
 
 
@@ -833,7 +891,16 @@ ul{
     .reviews{
         padding: 30px 0;
     }
+    .reviews .container{
+        padding: 0 10px;
+    }
     .reviews__inner{
+        display: block;
+    }
+    .reviews__desktop{
+        display: none;
+    }
+    .reviews__mobile{
         display: block;
     }
     .reviews__item{
@@ -841,10 +908,43 @@ ul{
         margin: 0 auto;
         padding: 30px;
     }
+    .slick-arrow{
+        width: 25px;
+        height: 25px;
+    }
+    .slick-arrow::before{
+        width: 5px;
+        height: 5px;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+    }
+    .slick-prev{
+        left: -5px;
+    }
+    .slick-next{
+        right: -5px;
+    }
     /* Contacts */
-
+    .contacts{
+        padding: 30px;
+    }
+    .contacts__inner{
+        max-width: 100%;
+        padding: 30px;
+    }
+    .contacts__title{
+        font-size: 20px;
+    }
+    .contacts__subtitle{
+        font-size: 20px;
+    }
+    .contacts__text{
+        font-size: 18px;
+    }
     /* Footer */
-
+    .footer .container{
+        padding: 0 15px;
+    }
 }
 
 
@@ -903,7 +1003,6 @@ ul{
     .elvo__text{
         font-size: 16px;
     }
-
     /* Tasks */
     .tasks__inner{
         margin-bottom: 0;
@@ -921,10 +1020,12 @@ ul{
         width: 100%;
         margin-bottom: 10px;
     }
-
     /* Services */
     .services .container{
         padding: 0 10px;
+    }
+    .services{
+        clip-path: polygon(0% 0%, 100% 0%, 100% 99%, 95% 100%, 90% 99%, 85% 100%, 80% 99%, 75% 100%, 70% 99%, 65% 100%, 60% 99%, 55% 100%, 50% 99%, 45% 100%, 40% 99%, 35% 100%, 30% 99%, 25% 100%, 20% 99%, 15% 100%, 10% 99%, 5% 100%, 0% 99%);
     }
     .section__header--suptitle, .section__header--title{
         font-size: 20px;
@@ -942,7 +1043,9 @@ ul{
     .portfolio__inner{
         width: 50%;
     }
-
+    .portfolio__title{
+        font-size: 10px;
+    }
     /* About */
     .about__inner{
         display: block;
@@ -955,7 +1058,6 @@ ul{
         max-width: 100%;
         padding: 15px 10px;
     }
-
     /* Planning */
     .planning__inner{
         justify-content: center;
@@ -968,7 +1070,28 @@ ul{
     /* Reviews */
 
     /* Contacts */
-
+    .contacts__title{
+        font-size: 18px;
+    }
+    .contacts__subtitle{
+        font-size: 15px;
+    }
+    .contacts__text{
+        font-size: 11px;
+    }
+    .social__link{
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+    }
     /* Footer */
-
+    @media (max-width: 430px) {
+        .footer__inner{
+            justify-content: center;
+        }
+        .footer__address{
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
 }
