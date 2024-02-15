@@ -1060,7 +1060,7 @@ ul{
     }
     /* Planning */
     .planning{
-        clip-path: polygon(0% 0%, 100% 0%, 100% 97%, 0% 100%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 0% 100%);
     }
     .planning__inner{
         justify-content: center;
