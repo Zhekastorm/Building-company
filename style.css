@@ -742,11 +742,11 @@ ul{
 }
 
 .footer__copyright{
-    font-size: 15px;
+    font-size: 10px;
     text-align: center;
     color: white;
     margin-top: 15px;
-    padding: 10px;
+    padding: 5px;
     border-top: 1px solid #f1f1f1;
 }
 
@@ -1059,6 +1059,9 @@ ul{
         padding: 15px 10px;
     }
     /* Planning */
+    .planning{
+        clip-path: polygon(0% 0%, 100% 0%, 100% 97%, 0% 100%);
+    }
     .planning__inner{
         justify-content: center;
     }
