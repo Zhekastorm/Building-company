@@ -12,9 +12,15 @@ const main = document.querySelector('.main');
 
 // Nav Menu
 burgerBtn.addEventListener("click", function(){
-  mainMenu.classList.toggle('active')
-  bodyHTML.classList.toggle('hidden')
-  main.classList.toggle('shading')
+  mainMenu.classList.toggle('active');
+  bodyHTML.classList.toggle('hidden');
+  main.classList.toggle('shading');
+})
+main.addEventListener('click', function (){
+  mainMenu.classList.remove('active');
+  burgerBtn.checked = false;
+  bodyHTML.classList.remove('hidden');
+  this.classList.remove('shading');
 })
 
 
