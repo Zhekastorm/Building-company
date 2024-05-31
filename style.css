@@ -136,6 +136,7 @@ p{
     background: #eeeeee;
     border-radius: 15px;
     padding: 25px;
+    transition: .5s;
 }
 .modal__card-header{
     text-align: center;
@@ -883,9 +884,6 @@ ul{
     /* Button */
     .btn_1{
         font-size: 12px;
-    }
-    .btn_1:hover{
-        pointer-events: none;
     }
     .popup__btn .btn_1 {
         font-size: 12px;
