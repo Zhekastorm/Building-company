@@ -26,14 +26,18 @@ p{
 
 /* Button */
 .btn_1{
+    width: 100%;
+    max-width: 250px;
     display: inline-block;
     background-color: rgb(247, 151, 0);
     color: black;
     font-size: 18px;
     font-weight: 600;
     text-decoration: none;
+    text-align: center;
     margin-top: 20px;
-    padding: 15px 30px;
+    padding: 15px 10px;
+    border: 1px;
     border-radius: 15px;
 
     transition: all .3s linear;
@@ -96,6 +100,95 @@ p{
     color: #9ea0ac;
 }
 
+.modal__block{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(7px);
+    z-index: 4;
+}
+.modal__block.hidden{
+    display: none;
+}
+.modal__window{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal__card{
+    width: 500px;
+    position: relative;
+    background: #eeeeee;
+    border-radius: 15px;
+    padding: 25px;
+}
+.modal__card-header{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.modal__card-header h1{
+    font-size: 20px;
+}
+.modal__close-btn{
+    display: inline-block;
+    font-size: 30px;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    padding: 0;
+}
+.modal__close-btn i:hover{
+    cursor: pointer;
+    animation: fadeOut .8s linear infinite;
+    transition: animation .3s linear;
+}
+@keyframes fadeOut {
+    0% {opacity: 1}
+    50% {opacity: 0}
+    100% {opacity: 1}
+}
+.modal__card-form{
+    text-align: center;
+}
+.modal__card-text{
+    font-size: 12px;
+    line-height: 1.6;
+}
+.modal__card-text a{
+    color: rgb(247, 151, 0)
+}
+
+/* Form */
+fieldset{
+    width: 100%;
+    padding: 0;
+    margin: 0 0 10px;
+    border: none;
+}
+.modal__card-form input, .modal__card-form textarea{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background: white;
+    border: 1px solid #cccccc;
+    padding: 10px;
+}
+.modal__card-form input placeholder, .modal__card-form textarea placeholder{
+    opacity: .7;
+}
+.modal__card-form input:focus, .modal__card-form textarea:focus{
+    outline: 0;
+    border: 1px solid rgb(247, 151, 0);
+}
+.modal__card-form textarea{
+    height: 100px;
+    resize: none;
+}
 /*_____Container_____*/
 .container{
     width: 100%;
@@ -107,9 +200,12 @@ p{
 /* _____Header_____ */
 .header{
     width: 100%;
-    background-color: #303030;
     position: fixed;
+    background-color: #303030;
     z-index: 1000;
+    top: 0;
+    left: 0;
+    transition: .5s;
 }
 
 .header__inner{
@@ -119,10 +215,8 @@ p{
     height: 80px;
 }
 
-.header.fixed{
-    position: fixed;
-    left: 0;
-    top: 0;
+.header.hidden{
+    transform: translateY(-100%);
 }
 
 #check__menu{
@@ -263,10 +357,6 @@ ul{
     margin-bottom: 24px;
     color: white;
     line-height: 1.5;
-}
-
-.intro--btn{
-    padding: 15px 88px;
 }
 
 /* ELVO */
@@ -781,6 +871,9 @@ ul{
     /* Button */
     .btn_1{
         font-size: 12px;
+    }
+    .btn_1:hover{
+        pointer-events: none;
     }
     .popup__btn .btn_1 {
         font-size: 12px;

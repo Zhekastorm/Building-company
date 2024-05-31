@@ -185,8 +185,35 @@
                     <div class="popup__card-text">
                         <p>Основное направление компании: строительство и реконструкция офисных зданий и сооружений любой сложности, капитальный ремонт зданий, строительство коттеджей, строительство домов, строительство магазинов, ремонт офисов, строительство мансард.</p>
                     </div>
-                    <div class="popup__btn">
-                        <a class="btn_1" href="#">Узнать подробнее</a>
+                    <button data-modal-button="modal-1" class="btn_1 popup__btn">Узнать подробнее</button>
+                </div>
+                <div id="modal-1" data-modal class="modal__block hidden">
+                    <div class="modal__window">
+                        <div class="modal__card">
+                            <div class="modal__card-header">
+                                <h1>Оставьте заявку на сайте</h1>
+                                <button class="modal__close-btn">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+                            <div class="modal__card-body">
+                                <form id="formContact" action="" class="modal__card-form">
+                                    <fieldset>
+                                        <input placeholder="Введите имя" type="text" tabindex="1" required autofocus>
+                                    </fieldset>
+                                    <fieldset>
+                                        <input placeholder="Введите email" type="email" tabindex="2" required>
+                                    </fieldset>
+                                    <fieldset>
+                                        <textarea placeholder="Введите ваш запрос" type="text" tabindex="3" required></textarea>
+                                    </fieldset>
+                                    <fieldset>
+                                        <button id="formBtn" type="submit" class="btn_1">Отправить заявку</button>
+                                    </fieldset>
+                                </form>
+                                <p class="modal__card-text">Нажимая на кнопку, Вы принимаете <a href="#" target="_blank">Положение</a> и <a href="#" target="_blank">Согласие</a> на обработку персональных данных.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -410,8 +437,37 @@
                     <div class="popup__card-text">
                         <p>Строительная компания ELVO является проектной организацией, которая отвечает за подготовку всего проекта, в соответствии с договором или контрактом.</p>
                     </div>
-                    <div class="popup__btn">
-                        <a class="btn_1" href="#">Узнать подробнее</a>
+                    <button data-modal-button="modal-2" class="btn_1 popup__btn">Узнать подробнее</button>
+                </div>
+
+                <div id="modal-2" data-modal class="modal__block hidden">
+                    <div class="modal__window">
+                        <div class="modal__card">
+                            <div class="modal__card-header">
+                                <h1>Оставьте свою заявку на сайте</h1>
+                                 <button class="modal__close-btn">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+                            <div class="modal__card-body">
+                                <div class="modal__card-form">
+                                     <form id="formContact" action="" class="modal__card-form">
+                                    <fieldset>
+                                        <input placeholder="Введите имя" type="text" tabindex="1" required autofocus>
+                                    </fieldset>
+                                    <fieldset>
+                                        <input placeholder="Введите email" type="email" tabindex="2" required>
+                                    </fieldset>
+                                    <fieldset>
+                                        <textarea placeholder="Введите ваш запрос" type="text" tabindex="3" required></textarea>
+                                    </fieldset>
+                                    <fieldset>
+                                        <button id="formBtn" type="submit" class="btn_1">Отправить заявку</button>
+                                    </fieldset>
+                                </form>
+                                <p class="modal__card-text">Нажимая на кнопку, Вы принимаете <a href="#" target="_blank">Положение</a> и <a href="#" target="_blank">Согласие</a> на обработку персональных данных.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -614,7 +670,7 @@
                 <div class="contacts__subtitle">Мы с радостью ответим на все ваши вопросы</div>
                 <div class="contacts__text">
                     <p>737428, Волгоградская область, город Шаховская, въезд Гагарина, 41<br><strong>Почта:</strong> commerce@company.com | <strong>Телефон:</strong> +1(152)956-50-88</p>
-                    <strong>Сайт: </strong><a href="https://247488.lp.tobiz.net/?v=420504&show_install_panel=true">Building-company.com</a>
+                    <strong>Сайт: </strong><a href="https://247488.lp.tobiz.net/?v=420504&show_install_panel=true" target="_blank">Building-company.com</a>
                     <br>
                     <p>Время работы: 8:00-19:00 без выходных</p>
                 </div>
