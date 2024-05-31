@@ -120,9 +120,14 @@ p{
     bottom: 0;
     backdrop-filter: blur(7px);
     z-index: 4;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity .25s, transform .30s;
 }
 .modal__block.hidden{
-    display: none;
+    transform: scale(0);
+    opacity: 0;
+
 }
 .modal__window{
     position: absolute;
@@ -173,7 +178,12 @@ p{
     line-height: 1.6;
 }
 .modal__card-text a{
-    color: rgb(247, 151, 0)
+    color: rgb(247, 151, 0);
+    transition: .2s linear;
+}
+.modal__card-text a:hover{
+    color: black;
+    font-weight: bold;
 }
 
 /* Form */
