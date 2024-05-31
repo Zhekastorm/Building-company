@@ -12,6 +12,18 @@ body.hidden{
     overflow: hidden;
 }
 
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-track{
+    background: black;
+}
+body::-webkit-scrollbar-thumb{
+    background: rgb(247, 151, 0);
+    border: 3px solid black;
+    border-radius: 3px;
+}
+
 *, *::before, *::after{
     box-sizing: border-box;
 }
