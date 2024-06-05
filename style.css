@@ -130,13 +130,15 @@ p{
 
 }
 .modal__window{
+    width: 100%;
+    max-width: 500px;
+    padding: 0 10px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 .modal__card{
-    width: 500px;
     position: relative;
     background: #eeeeee;
     border-radius: 15px;
@@ -157,7 +159,7 @@ p{
     border: none;
     position: absolute;
     top: 5px;
-    right: 10px;
+    right: 8px;
     padding: 0;
 }
 .modal__close-btn i:hover{
@@ -1187,6 +1189,9 @@ ul{
     }
     .popup__btn{
         text-align: center;
+    }
+    .modal__card{
+
     }
     /* Works */
     .works__item{
