@@ -7,7 +7,8 @@ const main = document.querySelector('.main');
 const modalBtnOpen = document.querySelectorAll("[data-modal-button]")
 const modalBtnClose = document.querySelectorAll('.modal__close-btn')
 const modalWindowAll = document.querySelectorAll('[data-modal]')
-const formBtn = document.querySelectorAll('#formBtn')
+const form = document.querySelectorAll('#form-Contact')
+const formBtn = document.querySelectorAll('.formBtn')
 
 
 // Header Fixed
@@ -36,21 +37,6 @@ main.addEventListener('click', function (){
   this.classList.remove('shading');
 })
 
-
-// Slider
-$('.reviews__inner').slick({
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 3,
-  speed: 2000,
-});
-
-$('.reviews__inner--mobile').slick({
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  speed: 2000,
-});
 
 //Popup
 modalBtnOpen.forEach(function (item){
@@ -83,5 +69,35 @@ modalWindowAll.forEach(function(item){
 })
 
 
+// Form
+form.forEach(function (item){
+  item.addEventListener('submit', getFormValue)
+})
+
+function getFormValue(event) {
+  event.preventDefault()
+  const user_name = form.querySelectorAll('[name="name"]').value,
+      user_email = form.querySelectorAll('[name="email"]').value,
+      user_text = form.querySelectorAll('[name="text"]').value
+  const userContact = (user_name + " " + user_email + " " + user_text)
+
+  alert(userContact)
+}
+
+
+// Slider
+$('.reviews__inner').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  speed: 2000,
+});
+
+$('.reviews__inner--mobile').slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  speed: 2000,
+});
 
 
