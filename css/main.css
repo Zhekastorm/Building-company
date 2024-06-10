@@ -1,0 +1,695 @@
+/* Intro */
+.section__intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url("/Building company/image/Background/background_1.jpg") center no-repeat;
+    background-size: cover;
+    background-color: #303030;
+    background-attachment: fixed;
+    padding: 190px 0;
+    position: relative;
+}
+
+.intro__inner{
+    float: left;
+    width: 100%;
+    max-width: 70%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.intro__title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 56px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 24px;
+}
+
+.intro__suptitle{
+    font-size: 40px;
+    color: #FF8C00;
+}
+
+.intro__text{
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    color: white;
+    line-height: 1.5;
+}
+
+/* ELVO */
+.elvo{
+    padding: 100px 0;
+    background-color: #ffe1a8;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+}
+
+.elvo__inner{
+    width: 100%;
+    text-align: center;
+}
+
+.elvo__suptitle{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #696969;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.elvo__title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 46px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.elvo__text{
+    font-size: 24px;
+    line-height: 1.35;
+    margin-top: 25px;
+}
+
+/* Tasks */
+
+.tasks{
+    padding-top: 120px;
+    padding-bottom: 40px;
+}
+
+.tasks__inner{
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.tasks__img img{
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.popup--tasks{
+    bottom: -60px;
+    right: 80px;
+}
+
+/* Works */
+.works{
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.works__inner{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.works__item{
+    width: 33.33333%;
+    position: relative;
+}
+
+.works__img{
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.works__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: 30px;
+}
+
+.works__title{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.works__text{
+    font-size: 16px;
+    line-height: 1.4;
+    color: white;
+}
+
+/* Services */
+
+.services{
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: #ffe1a8;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 98% 100%, 96% 98%, 94% 100%, 92% 98%, 90% 100%, 88% 98%, 86% 100%, 84% 98%, 82% 100%, 80% 98%, 78% 100%, 76% 98%, 74% 100%, 72% 98%, 70% 100%, 68% 98%, 66% 100%, 64% 98%, 62% 100%, 60% 98%, 58% 100%, 56% 98%, 54% 100%, 52% 98%, 50% 100%, 48% 98%, 46% 100%, 44% 98%, 42% 100%, 40% 98%, 38% 100%, 36% 98%, 34% 100%, 32% 98%, 30% 100%, 28% 98%, 26% 100%, 24% 98%, 22% 100%, 20% 98%, 18% 100%, 16% 98%, 14% 100%, 12% 98%, 10% 100%, 8% 98%, 6% 100%, 4% 98%, 2% 100%, 0% 98%);
+}
+
+.section__header{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.section__header--suptitle{
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: #FF8C00;
+}
+
+.section__header--title{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.services__inner{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.services__item{
+    width: 32%;
+    background-color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.services__icon i{
+    font-size: 50px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.services__title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.services__text{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* Portfolio */
+
+.section__portfolio{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 150px;
+}
+
+.portfolio{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio__inner{
+    width: 25%;
+}
+
+.portfolio__item{
+    width: 100%;
+    position: relative;
+}
+
+.portfolio__img img{
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+    opacity: 1;
+    transition: all .3s linear;
+}
+
+.portfolio__content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .6);
+    padding: 15px;
+
+    opacity: 0;
+    transition: all .3s linear;
+}
+
+.portfolio__item:hover .portfolio__content{
+    opacity: 1;
+}
+
+.portfolio__title{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* About */
+
+.about{
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.about__inner{
+    width: 100%;
+    padding-left: 400px;
+    position: relative;
+}
+
+.about__img img{
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.popup__card--elvo{
+    max-width: 510px;
+    bottom: -1px;
+    left: 0;
+    z-index: 1;
+}
+
+.popup__card--elvo .popup__card-text::before{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+/* Form */
+.modal__card-form input, .modal__card-form textarea{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background: white;
+    border: 1px solid #cccccc;
+    padding: 10px;
+}
+.modal__card-form input placeholder, .modal__card-form textarea placeholder{
+    opacity: .7;
+}
+.modal__card-form input:focus, .modal__card-form textarea:focus{
+    outline: 0;
+    border: 1px solid rgb(247, 151, 0);
+}
+.modal__card-form textarea{
+    height: 100px;
+    resize: none;
+}
+
+/* Planning */
+
+.planning{
+    padding: 120px 0;
+    background-color: #ffe1a8;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 96%, 0% 100%);
+}
+
+.planning__item{
+    width: 24%;
+    background-color: white;
+    border-radius: 25px;
+    padding: 40px 25px;
+    text-align: center;
+}
+
+/* Reviews */
+
+.reviews{
+    padding-top: 80px;
+    padding-bottom: 120px;
+    position: relative;
+}
+
+.reviews__inner{
+    width: 100%;
+    display: flex;
+}
+
+.reviews__desktop{
+    display: block;
+}
+
+.reviews__mobile{
+    display: none;
+}
+
+.reviews__item{
+    width: 27%;
+    background-color: #ffe1a8;
+    padding: 30px 30px 75px;
+    margin: 0 15px 30px;
+    border-radius: 15px;
+}
+
+.reviews__data{
+    font-size: 18px;
+    font-weight: 300;
+    color: #777777;
+    margin-bottom: 25px;
+}
+
+.reviews__prof{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 25px;
+}
+
+.reviews__text{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.55;
+}
+
+.slick-arrow{
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+    border-color: transparent;
+    text-align: -webkit-center;
+    transition: all .3s linear;
+}
+
+.slick-arrow:active{
+    filter: invert(30%);
+}
+
+.slick-arrow::before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+}
+
+.slick-prev{
+    left: -55px;
+}
+
+.slick-prev::before{
+    transform: rotate(-45deg);
+}
+
+.slick-next{
+    right: -55px;
+}
+
+.slick-next::before{
+    transform: rotate(130deg);
+}
+
+/*______Media______*/
+
+/* Tablet */
+@media (max-width: 1130px) {
+
+    /* Intro */
+    .section__intro{
+        padding: 100px 0;
+        background: url("/Building company/image/Background/background_1.jpg") no-repeat center;
+        background-size: cover;
+    }
+    .intro__inner{
+        max-width: 65%;
+    }
+    .intro__title{
+        font-size: 35px;
+    }
+    .intro__suptitle{
+        font-size: 25px;
+    }
+    .intro__text{
+        font-size: 22px;
+    }
+    /* ELVO */
+    .elvo{
+        padding: 30px 0;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%);
+    }
+    .elvo__title{
+        font-size: 35px;
+    }
+    .elvo__suptitle{
+        margin-bottom: 10px;
+    }
+    .elvo__text{
+        font-size: 18px;
+    }
+    /* Tasks */
+    .tasks{
+        padding: 30px 0;
+    }
+    .tasks__inner{
+        margin-bottom: 60px;
+    }
+    .popup--tasks{
+        max-width: 300px;
+        right: 30px;
+        padding: 30px;
+    }
+    .popup__card-title{
+        font-size: 20px;
+    }
+    .popup__card-text{
+        font-size: 16px;
+    }
+    /* Works */
+    .works{
+        padding-top: 0;
+        padding-bottom: 30px;
+    }
+    .works__title{
+        font-size: 20px;
+    }
+    .works__text{
+        font-size: 10px;
+    }
+    /* Services */
+    .services{
+        padding: 30px 0;
+    }
+    .section__header--suptitle, .section__header--title{
+        font-size: 35px;
+    }
+    .services__title{
+        font-size: 20px;
+    }
+    .services__text{
+        font-size: 18px;
+    }
+    /* Portfolio */
+    .section__portfolio{
+        padding-top: 30px;
+    }
+    /* About */
+    .about{
+        padding: 30px 0;
+    }
+    .about__inner{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-left: 0;
+    }
+    .about__img{
+        width: 50%;
+        order: 2;
+    }
+    .about__img img{
+        height: 100%;
+    }
+    .popup__card--elvo{
+        width: 50%;
+        position: static;
+        padding: 10px 20px;
+    }
+    .popup__card-suptitle{
+        font-size: 18px;
+    }
+    /* Planning */
+    .planning__item{
+        width: 48%;
+        margin-bottom: 30px;
+    }
+    /* Reviews */
+    .reviews{
+        padding: 30px 0;
+    }
+    .reviews .container{
+        padding: 0 100px;
+    }
+    .reviews__inner{
+        display: block;
+    }
+    .reviews__desktop{
+        display: none;
+    }
+    .reviews__mobile{
+        display: block;
+    }
+    .reviews__item{
+        width: 75%;
+        margin: 0 auto;
+        padding: 30px;
+    }
+    .slick-arrow{
+        width: 25px;
+        height: 25px;
+    }
+    .slick-arrow::before{
+        width: 5px;
+        height: 5px;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+    }
+    .slick-prev{
+        left: -5px;
+    }
+    .slick-next{
+        right: -5px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+
+    /* Intro */
+    .section__intro{
+        padding: 120px 0 40px 0;
+        background: url("/Building company/image/Background/background_1.jpg") no-repeat center;
+        background-size: cover;
+    }
+    .intro__inner{
+        max-width: 100%;
+        padding-left: 10px;
+    }
+    .intro__title{
+        font-size: 24px;
+    }
+    .intro__suptitle{
+        font-size: 18px;
+    }
+    .intro__text{
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+    /* ELVO */
+    .elvo{
+        clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 100%, 0% 95%);
+    }
+    .elvo__suptitle{
+        font-size: 18px;
+    }
+    .elvo__title{
+        font-size: 20px;
+    }
+    .elvo__text{
+        font-size: 16px;
+    }
+    /* Tasks */
+    .tasks__inner{
+        margin-bottom: 0;
+    }
+    .popup--tasks{
+        position: static;
+        max-width: 100%;
+        padding: 30px 10px;
+    }
+    .popup__btn{
+        text-align: center;
+    }
+    /* Works */
+    .works__item{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    /* Services */
+    .services .container{
+        padding: 0 10px;
+    }
+    .services{
+        clip-path: polygon(0% 0%, 100% 0%, 100% 99%, 95% 100%, 90% 99%, 85% 100%, 80% 99%, 75% 100%, 70% 99%, 65% 100%, 60% 99%, 55% 100%, 50% 99%, 45% 100%, 40% 99%, 35% 100%, 30% 99%, 25% 100%, 20% 99%, 15% 100%, 10% 99%, 5% 100%, 0% 99%);
+    }
+    .section__header--suptitle, .section__header--title{
+        font-size: 20px;
+    }
+    .services__item{
+        width: 100%;
+    }
+    .services__title{
+        font-size: 20px;
+    }
+    .services__text{
+        font-size: 16px;
+    }
+    /* Portfolio */
+    .portfolio__inner{
+        width: 50%;
+    }
+    .portfolio__title{
+        font-size: 10px;
+    }
+    /* About */
+    .about__inner{
+        display: block;
+    }
+    .about__img{
+        width: 100%;
+    }
+    .popup__card--elvo{
+        width: 100%;
+        max-width: 100%;
+        padding: 15px 10px;
+    }
+    /* Planning */
+    .planning{
+        clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 0% 100%);
+    }
+    .planning__inner{
+        justify-content: center;
+    }
+    .planning__item{
+        width: 100%;
+        max-width: 270px;
+        margin: 0 auto 30px;
+    }
+}

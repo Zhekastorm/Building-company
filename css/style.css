@@ -1,0 +1,597 @@
+body{
+    margin: 0;
+    background: white;
+    padding: 0;
+    
+    font-family:'Montserrat', sans-serif;
+    font-size: 18px;
+    color: black
+}
+
+body.hidden{
+    overflow: hidden;
+}
+
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-track{
+    background: black;
+}
+body::-webkit-scrollbar-thumb{
+    background: rgb(247, 151, 0);
+    border: 3px solid black;
+    border-radius: 3px;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+p{
+    margin: 0 0 10px;
+}
+
+/* Button */
+.btn{
+    width: 100%;
+    max-width: 250px;
+    display: inline-block;
+    background-color: rgb(247, 151, 0);
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px 10px;
+    border: 1px;
+    border-radius: 15px;
+
+    transition: all .3s linear;
+}
+
+.btn:hover{
+    background-color: white;
+}
+
+.btn:active{
+    filter: invert(15%);
+}
+
+/* Darkening for blocks */
+.main.shading{
+    position: fixed;
+    height: 100vh;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, .7);
+    transition: .5s;
+}
+.shading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+/* Popup */
+.popup__card{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    max-width: 400px;
+    background-color: #f1f1f1;
+    padding: 60px;
+}
+
+.popup__card-suptitle{
+    font-size: 26px;
+    font-weight: bold;
+    color: #FF8C00;
+    text-transform: uppercase;
+}
+
+.popup__card-title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.popup__card-text{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #9ea0ac;
+}
+
+.modal__block{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(7px);
+    z-index: 4;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity .25s, transform .30s;
+}
+.modal__block.hidden{
+    transform: scale(0);
+    opacity: 0;
+
+}
+.modal__window{
+    width: 100%;
+    max-width: 500px;
+    padding: 0 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal__card{
+    position: relative;
+    background: #eeeeee;
+    border-radius: 15px;
+    padding: 25px;
+    transition: .5s;
+}
+.modal__card-header{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.modal__card-header h1{
+    font-size: 20px;
+}
+.modal__close-btn{
+    display: inline-block;
+    font-size: 30px;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    padding: 0;
+}
+.modal__close-btn i:hover{
+    cursor: pointer;
+    animation: fadeOut .8s linear infinite;
+    transition: animation .3s linear;
+}
+@keyframes fadeOut {
+    0% {opacity: 1}
+    50% {opacity: 0}
+    100% {opacity: 1}
+}
+.modal__card-form{
+    text-align: center;
+}
+.modal__card-text{
+    font-size: 12px;
+    line-height: 1.6;
+}
+.modal__card-text a{
+    color: rgb(247, 151, 0);
+    transition: .2s linear;
+}
+.modal__card-text a:hover{
+    color: black;
+    font-weight: bold;
+}
+
+/* Form */
+fieldset{
+    width: 100%;
+    padding: 0;
+    margin: 0 0 10px;
+    border: none;
+}
+.form input, .form textarea{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background: white;
+    border: 1px solid #cccccc;
+    padding: 10px;
+}
+.form input placeholder, .form textarea placeholder{
+    opacity: .7;
+}
+.form input:focus, .form textarea:focus{
+    outline: 0;
+    border: 1px solid rgb(247, 151, 0);
+}
+.form textarea{
+    height: 100px;
+    resize: none;
+}
+/*_____Container_____*/
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* _____Header_____ */
+.header{
+    width: 100%;
+    position: fixed;
+    background-color: #303030;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    transition: .5s;
+}
+
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.header.hidden{
+    transform: translateY(-100%);
+}
+
+#check__menu{
+    display: none;
+}
+
+label{
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    z-index: 1;
+    line-height: 30px;
+    width: 35px;
+    height: 35px;
+}
+
+.burger__line{
+    display: none;
+    position: absolute;
+    right: 15px;
+    z-index: 1;
+
+    width: 35px;
+    height: 3px;
+    background-color: white;
+}
+
+.burger__line.first{
+    top: 32px;
+}
+
+.burger__line.second{
+    bottom: 32px;
+}
+
+.header__logo{
+    margin-right: 25px;
+}
+
+.header__logo img{
+    display: block;
+    width: 200px;
+    height: 100%;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav__link{
+    position: relative;
+    margin-left: 15px;
+}
+
+.nav__link:first-child{
+    margin-left: 0;
+}
+
+.nav__link::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(247, 151, 0);
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    z-index: 1;
+    margin-top: 10px;
+    transform: scale3d(0, 1, 1);
+    transform-origin: 0 50%;
+    transition: all .2s ease-in;
+}
+
+.nav__link:hover::after{
+    transform: scale3d(1, 1, 1);
+}
+
+.nav__link a{
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 70px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-top: 10px;
+}
+
+/* Contacts */
+.contacts{
+    padding: 140px 0;
+    background: url("/Building company/image/Background/Контакты.jpg") no-repeat center;
+    background-size: cover;
+    background-color: #ffe1a8;
+}
+
+.contacts__inner{
+    max-width: 880px;
+    background: white;
+    padding: 60px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contacts__title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.contacts__subtitle{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.contacts__text{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.35;
+}
+
+.social__contacts{
+    display: flex;
+    justify-content: center;
+}
+
+.social__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: black;
+    padding: 5px;
+    border-radius: 7px;
+
+    margin-right: 10px;
+    background-color: #ffe1a8;
+    transition: all .3s linear;
+}
+
+.social__link:last-child{
+    margin-right: 0;
+}
+
+.social__icon{
+    display: block;
+    height: 25px;
+    fill: white;
+
+    transition: fill .3s linear;
+}
+
+.social__link:hover{
+    background-color: black;
+}
+
+/* Footer */
+
+.footer{
+    padding-top: 40px;
+    background-color: #303030;
+}
+
+.footer__inner{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    font-size: 16px;
+    color: white;
+    line-height: 1.5;
+}
+
+.footer__logo img{
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    overflow: hidden;
+}
+
+.footer__address{
+    max-width: 50%;
+    text-align: right;
+}
+
+.footer__number{
+    color: white;
+    text-decoration: none;
+    margin-bottom: 12px;
+
+    transition: color .3s linear;
+}
+
+.footer__number:hover{
+    color: #ffe1a8;
+}
+
+.footer__copyright{
+    font-size: 10px;
+    text-align: center;
+    color: white;
+    margin-top: 15px;
+    padding: 5px;
+    border-top: 1px solid #f1f1f1;
+}
+
+
+/*______Media______*/
+
+/* Tablet */
+@media (max-width: 1130px) {
+
+    /* Container */
+    .container{
+        padding: 0 30px;
+    }
+    /* Button */
+    .btn{
+        font-size: 15px;
+    }
+    /* Header */
+    .nav__link a{
+        line-height: 18px;
+    }
+    .nav__link:after{
+        bottom: -5px;
+    }
+    /* Contacts */
+    .contacts{
+        padding: 30px;
+    }
+    .contacts__inner{
+        max-width: 100%;
+        padding: 30px;
+    }
+    .contacts__title{
+        font-size: 20px;
+    }
+    .contacts__subtitle{
+        font-size: 20px;
+    }
+    .contacts__text{
+        font-size: 18px;
+    }
+    /* Footer */
+    .footer .container{
+        padding: 0 15px;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 800px) {
+    /* Container */
+    .container{
+        padding: 0;
+    }
+    /* Header */
+    .header__inner{
+        justify-content: center;
+    }
+    label{
+        display: block;
+    }
+    .burger__line{
+        display: block;
+        transition: .3s;
+    }
+    .header__logo{
+        margin-right: 0;
+    }
+    .header__logo img{
+        width: 155px;
+    }
+    .main__menu{
+        width: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: fixed;
+        top: 79px;
+        left: 0;
+        z-index: 1000;
+        background-color: #303030;
+        transition: .5s;
+
+        overflow-x: hidden;
+
+    }
+
+    .main__menu.active{
+        width: 250px;
+        overflow-y: auto;
+    }
+
+    #check__menu:checked ~ .first{
+        top: 38px;
+        transform: rotate(45deg);
+    }
+    #check__menu:checked ~ .second{
+        bottom: 38px;
+        transform: rotate(-45deg);
+    }
+    .nav__link{
+        margin-left: 0;
+        width: 100%;
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+    }
+    /* Contacts */
+    .contacts__title{
+        font-size: 18px;
+    }
+    .contacts__subtitle{
+        font-size: 15px;
+    }
+    .contacts__text{
+        font-size: 11px;
+    }
+    .social__link{
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+    }
+    /* Footer */
+    @media (max-width: 430px) {
+        .footer__inner{
+            justify-content: center;
+        }
+        .footer__address{
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+}
