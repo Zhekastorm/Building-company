@@ -3,14 +3,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@300;400;500;700&family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
 	<script src="https://kit.fontawesome.com/59933ad380.js" crossorigin="anonymous" defer></script>
-	<script src="script.js" defer></script>
+	<script src="js/main.js" defer></script>
     
     <title>Сайт строительной компании</title>
 </head>
@@ -94,7 +96,7 @@
             <div class="burger__line first"></div>
             <div class="burger__line second"></div>
             <div class="header__logo">
-                <img src="image/Логотип.png">
+                <img src="image/Logo/Логотип.png">
             </div>
 
             <div id="menuNav" class="main__menu">
@@ -149,7 +151,7 @@
                 <div class="intro__text">
                     <p>Специализированная строительная компания в области строительства, реконструкции и ремонта объектов</p>
                 </div>
-                <a class="btn_1 intro--btn" href="#">Узнать подробнее</a>
+                <a class="btn" href="#">Узнать подробнее</a>
             </div>
             <div class="shading"></div>
 
@@ -177,7 +179,7 @@
 
             <div class="tasks__inner">
                 <div class="tasks__img">
-                    <img src="image/Наши задачи.jpg">
+                    <img src="image/Main/Tasks/Наши задачи.jpg">
                 </div>
 
                 <div class="popup__card popup--tasks">
@@ -185,7 +187,7 @@
                     <div class="popup__card-text">
                         <p>Основное направление компании: строительство и реконструкция офисных зданий и сооружений любой сложности, капитальный ремонт зданий, строительство коттеджей, строительство домов, строительство магазинов, ремонт офисов, строительство мансард.</p>
                     </div>
-                    <button data-modal-button="modal-1" class="btn_1 popup__btn">Узнать подробнее</button>
+                    <button data-modal-button="modal-1" class="btn popup__btn">Узнать подробнее</button>
                 </div>
                 <div id="modal-1" data-modal class="modal__block hidden">
                     <div class="modal__window">
@@ -197,20 +199,6 @@
                                 </button>
                             </div>
                             <div class="modal__card-body">
-                                <form id="formContact" action="" class="modal__card-form">
-                                    <fieldset>
-                                        <input placeholder="Введите имя" type="text" tabindex="1" required autofocus>
-                                    </fieldset>
-                                    <fieldset>
-                                        <input placeholder="Введите email" type="email" tabindex="2" required>
-                                    </fieldset>
-                                    <fieldset>
-                                        <textarea placeholder="Введите ваш запрос" type="text" tabindex="3" required></textarea>
-                                    </fieldset>
-                                    <fieldset>
-                                        <button id="formBtn" type="submit" class="btn_1">Отправить заявку</button>
-                                    </fieldset>
-                                </form>
                                 <p class="modal__card-text">Нажимая на кнопку, Вы принимаете <a href="#" target="_blank">Положение</a> и <a href="#" target="_blank">Согласие</a> на обработку персональных данных.</p>
                             </div>
                         </div>
@@ -226,7 +214,7 @@
         <div class="works__inner">
 
             <div class="works__item">
-                <img class="works__img" src="image/Дизайн.jpg">
+                <img class="works__img" src="image/Main/Works/Дизайн.jpg">
                 <div class="works__content">
                     <h1 class="works__title">Дизайн и строительство</h1>
                     <div class="works__text">
@@ -237,7 +225,7 @@
             </div>
 
             <div class="works__item">
-                <img class="works__img" src="image/Строительство.jpg">
+                <img class="works__img" src="image/Main/Works/Строительство.jpg">
                 <div class="works__content">
                     <h1 class="works__title">Строительство и ремонт</h1>
                     <div class="works__text">
@@ -248,7 +236,7 @@
             </div>
 
             <div class="works__item">
-                <img class="works__img" src="image/Отделка.jpg">
+                <img class="works__img" src="image/Main/Works/Отделка.jpg">
                 <div class="works__content">
                     <h1 class="works__title">Отделка интерьеров</h1>
                     <div class="works__text">
@@ -346,7 +334,7 @@
             <div class="portfolio__inner">
                 <div class="portfolio__item">
                     <div class="portfolio__img">
-                        <img src="image/Недавние проекты_1.jpg" alt="">
+                        <img src="image/Main/Portfolio/Недавние проекты_1.jpg" alt="">
                     </div>
                     <div class="portfolio__content">
                         <div class="portfolio__title">г. Санкт-Петербург</div>
@@ -354,7 +342,7 @@
                 </div>
                 <div class="portfolio__item">
                     <div class="portfolio__img">
-                        <img src="image/Недавние проекты_5.jpg" alt="">
+                        <img src="image/Main/Portfolio/Недавние проекты_5.jpg" alt="">
                     </div>
                     <div class="portfolio__content">
                         <div class="portfolio__title">г. Москва</div>
@@ -365,7 +353,7 @@
             <div class="portfolio__inner">
                 <div class="portfolio__item">
                     <div class="portfolio__img">
-                        <img src="image/Недавние проекты_2.jpg" alt="">
+                        <img src="image/Main/Portfolio/Недавние проекты_2.jpg" alt="">
                     </div>
                     <div class="portfolio__content">
                         <div class="portfolio__title">г. Санкт-Петербург</div>
@@ -373,7 +361,7 @@
                 </div>
                 <div class="portfolio__item">
                     <div class="portfolio__img">
-                        <img src="image/Недавние проекты_6.jpg" alt="">
+                        <img src="image/Main/Portfolio/Недавние проекты_6.jpg" alt="">
                     </div>
                     <div class="portfolio__content">
                         <div class="portfolio__title">г. Москва</div>
@@ -384,7 +372,7 @@
             <div class="portfolio__inner">
                 <div class="portfolio__item">
                     <div class="portfolio__img">
-                        <img src="image/Недавние проекты_3.jpg" alt="">
+                        <img src="image/Main/Portfolio/Недавние проекты_3.jpg" alt="">
                     </div>
                     <div class="portfolio__content">
                         <div class="portfolio__title">г. Санкт-Петербург</div>
@@ -392,7 +380,7 @@
                 </div>
                 <div class="portfolio__item">
                     <div class="portfolio__img">
-                        <img src="image/Недавние проекты_7.jpg" alt="">
+                        <img src="image/Main/Portfolio/Недавние проекты_7.jpg" alt="">
                     </div>
                     <div class="portfolio__content">
                         <div class="portfolio__title">г. Москва</div>
@@ -403,7 +391,7 @@
             <div class="portfolio__inner">
                 <div class="portfolio__item">
                     <div class="portfolio__img">
-                        <img src="image/Недавние проекты_4.jpg" alt="">
+                        <img src="image/Main/Portfolio/Недавние проекты_4.jpg" alt="">
                     </div>
                     <div class="portfolio__content">
                         <div class="portfolio__title">г. Санкт-Петербург</div>
@@ -411,7 +399,7 @@
                 </div>
                 <div class="portfolio__item">
                     <div class="portfolio__img">
-                        <img src="image/Недавние проекты_8.jpg" alt="">
+                        <img src="image/Main/Portfolio/Недавние проекты_8.jpg" alt="">
                     </div>
                     <div class="portfolio__content">
                         <div class="portfolio__title">г. Москва</div>
@@ -429,7 +417,7 @@
 
             <div class="about__inner">
                 <div class="about__img">
-                    <img src="image/Компания ELVO.jpg" alt="">
+                    <img src="image/Main/About company/Компания ELVO.jpg" alt="">
                 </div>
                 <div class="popup__card popup__card--elvo">
                     <div class="popup__card-suptitle">Компания ELVO</div>
@@ -437,7 +425,7 @@
                     <div class="popup__card-text">
                         <p>Строительная компания ELVO является проектной организацией, которая отвечает за подготовку всего проекта, в соответствии с договором или контрактом.</p>
                     </div>
-                    <button data-modal-button="modal-2" class="btn_1 popup__btn">Узнать подробнее</button>
+                    <button data-modal-button="modal-2" class="btn">Узнать подробнее</button>
                 </div>
 
                 <div id="modal-2" data-modal class="modal__block hidden">
@@ -451,20 +439,21 @@
                             </div>
                             <div class="modal__card-body">
                                 <div class="modal__card-form">
-                                     <form id="formContact" action="" class="modal__card-form">
+                                     <form id="form-Contact" action="#" class="modal__card-form">
                                     <fieldset>
-                                        <input placeholder="Введите имя" type="text" tabindex="1" required autofocus>
+                                        <input name="name" type="text" tabindex="1" placeholder="Введите ФИО" value="" autofocus required>
                                     </fieldset>
                                     <fieldset>
-                                        <input placeholder="Введите email" type="email" tabindex="2" required>
+                                        <input name="email" type="email" tabindex="2" placeholder="Введите email" value="" required>
                                     </fieldset>
                                     <fieldset>
-                                        <textarea placeholder="Введите ваш запрос" type="text" tabindex="3" required></textarea>
+                                        <textarea name="text" type="text" tabindex="3" placeholder="Что вы хотите узнать..." value="" required></textarea>
                                     </fieldset>
                                     <fieldset>
-                                        <button id="formBtn" type="submit" class="btn_1">Отправить заявку</button>
+                                        <button type="submit" class="btn formBtn">Отправить заявку</button>
                                     </fieldset>
                                 </form>
+                                </div>
                                 <p class="modal__card-text">Нажимая на кнопку, Вы принимаете <a href="#" target="_blank">Положение</a> и <a href="#" target="_blank">Согласие</a> на обработку персональных данных.</p>
                             </div>
                         </div>
@@ -652,9 +641,6 @@
                         </div>
                     </div>
 
-
-
-
                 </div>
             </div>
 
@@ -705,7 +691,7 @@
 
         <div class="footer__inner">
             <div class="footer__logo">
-                <img src="image/Логотип.png" alt="">
+                <img src="image/Logo/Логотип.png" alt="">
             </div>
 
             <div class="footer__address">
